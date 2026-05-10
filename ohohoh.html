@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>google.com</title>
+
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/testamalame/weylee@main/TemplateData/images/unity_logo.png"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/testamalame/weylee@main/TemplateData/css/style.css"/>
+
+<script src="https://cdn.jsdelivr.net/gh/testamalame/weylee@main/Manager.js"></script>
+</head>
+
+<body>
+<div id="unity-container">
+    <canvas id="unity-canvas"></canvas>
+
+    <div id="ohayo-logo" onclick="onOhayoClick()"></div>
+
+    <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+
+        <div id="unity-progress-bar-empty">
+            <div id="unity-progress-bar-full"></div>
+        </div>
+    </div>
+
+    <div id="unclicked"></div>
+</div>
+
+<script>
+document.getElementsByTagName("head")[0].innerHTML +=
+'<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">';
+
+document.getElementsByTagName("head")[0].innerHTML +=
+'<meta name="HandheldFriendly" content="true" />';
+
+document.addEventListener("gesturestart", function(e) {
+    e.preventDefault();
+});
+
+document.addEventListener("gesturechange", function(e) {
+    e.preventDefault();
+});
+
+document.addEventListener("gestureend", function(e) {
+    e.preventDefault();
+});
+
+var loaderUrl =
+"https://cdn.jsdelivr.net/gh/testamalame/weylee@main/Build/build.loader.js";
+
+var config = {
+    dataUrl:
+    "https://cdn.jsdelivr.net/gh/testamalame/weylee@main/Build/build.data.unityweb",
+
+    frameworkUrl:
+    "https://cdn.jsdelivr.net/gh/testamalame/weylee@main/Build/build.framework.js.unityweb",
+
+    codeUrl:
+    "https://cdn.jsdelivr.net/gh/testamalame/weylee@main/Build/build.wasm.unityweb",
+
+    streamingAssetsUrl: "StreamingAssets",
+    companyName: "Ohayo",
+    productName: "Tap Goal",
+    productVersion: "1.7",
+};
+
+var container = document.querySelector("#unity-container");
+var canvas = document.querySelector("#unity-canvas");
+var loadingBar = document.querySelector("#unity-loading-bar");
+var progressBarFull = document.querySelector("#unity-progress-bar-full");
+var ohayoLogo = document.querySelector("#ohayo-logo");
+
+var gameInstance = null;
+
+if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+    config.devicePixelRatio = 1;
+
+    var meta = document.createElement('meta');
+    meta.name = 'viewport';
+    meta.content =
+    'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+
+    document.getElementsByTagName('head')[0].appendChild(meta);
+}
+
+loadingBar.style.display = "block";
+
+var script = document.createElement("script");
+script.src = loaderUrl;
+
+var mobileAndTabletCheck = function() {
+    let check = false;
+
+    (function(a){
+        if(/android|iphone|ipad|ipod|mobile/i.test(a))
+            check = true;
+    })(navigator.userAgent || navigator.vendor || window.opera);
+
+    return check;
+}
+
+script.onload = () => {
+
+    createUnityInstance(canvas, config, (progress) => {
+        progressBarFull.style.width = 100 * progress + "%";
+    })
+
+    .then((unityInstance) => {
+
+        gameInstance = unityInstance;
+
+        canvas.style.visibility = "hidden";
+        loadingBar.style.display = "none";
+
+        setTimeout(() => {
+
+            canvas.style.visibility = "visible";
+            ohayoLogo.style.visibility = "visible";
+
+            if(!mobileAndTabletCheck()) {
+                canvas.style.width = "40vw";
+                canvas.style.marginLeft = "30vw";
+
+                ohayoLogo.style.marginLeft = "31vw";
+
+                document.getElementById("unclicked").style.marginLeft = "30vw";
+            }
+
+        }, 7000);
+
+    })
+
+    .catch((message) => {
+        alert(message);
+    });
+};
+
+window.onbeforeunload = function(e) {
+    if(gameInstance) {
+        gameInstance.SendMessage("OnCloseListener", "OnClose");
+    }
+};
+
+document.body.appendChild(script);
+
+function openFullscreen() {
+
+    var elem = document.documentElement;
+
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    }
+
+    else if (elem.webkitRequestFullscreen) {
+        elem.webkitRequestFullscreen();
+    }
+
+    else if (elem.msRequestFullscreen) {
+        elem.msRequestFullscreen();
+    }
+}
+</script>
+
+</body>
+</html>
