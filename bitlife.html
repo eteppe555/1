@@ -1,0 +1,52 @@
+<html lang="en"><head><script src="//www.google.com/jsapi"></script><script>window.parent.maeExportApis_();</script>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+<title>BitLife - Life Simulator</title>
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background: #000;            
+        display: flex;
+        justify-content: center;      
+        align-items: center;          
+        overflow: hidden;
+    }
+
+   #gameContainer {
+    height: 100%;          
+    width: auto;           
+    max-width: 600px;      
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+    canvas {
+        height: 100%;                 
+        width: auto;                  
+        display: block;
+    }
+</style>
+
+
+<script src="https://cdn.jsdelivr.net/gh/a456pur/seraph@ae2fcc6d6a9cd051654fcc0519080db1f79cf2a7/games/bitlife/Build/UnityLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/a456pur/seraph@ae2fcc6d6a9cd051654fcc0519080db1f79cf2a7/games/bitlife/TemplateData/UnityProgress.js"></script>
+</head>
+<body>
+<div id="gameContainer" style="padding: 0px; margin: 0px; border: 0px; position: relative; background: rgb(35, 31, 32);"><canvas id="#canvas" width="672" height="806" style="width: 100%; height: 100%; cursor: default;"></canvas><div class="logo Dark" style="display: none;"></div><div class="progress Dark" style="display: none;"><div class="empty" style="width: 0%;"></div><div class="full" style="width: 100%;"></div></div></div>
+
+<script>
+    var unityInstance = UnityLoader.instantiate(
+        "gameContainer",
+        "https://cdn.jsdelivr.net/gh/a456pur/seraph@ae2fcc6d6a9cd051654fcc0519080db1f79cf2a7/games/bitlife/Build/BitLife.json",
+        { onProgress: UnityProgress }
+    );
+</script>
+
+
+<script src="blob:https://n-o4lyxbngegboogtey7fh63bwat2zjkdw4yw53ha-0lu-script.googleusercontent.com/b81a72bf-c6ec-4ab1-9adf-d0a82f08b0b1" id="85b4d0e05225dc7b6ef550c3047cb4b7"></script></body></html>
