@@ -1,0 +1,92 @@
+<html lang="en-US" style="width:100%;height:100%;background-color:black;"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Play Eaglercraft 1.12.2 Minecraft in your browser with saving, servers, and full screen. Raw game build by StaticQuasar931.">
+    <meta name="keywords" content="Eaglercraft 1.12.2, eaglercraft, eaglercraftx, minecraft, 1.12, 1.12.2, minecraft browser, minecraft unblocked, minecraft at school, static, staticquasar, staticquasar931, static 931, staticq, staticq931">
+    <title>Eaglercraft 1.12.2</title>
+
+    <meta property="og:locale" content="en-US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Eaglercraft 1.12.2">
+    <meta property="og:description" content="Play Eaglercraft 1.12.2 Minecraft in your browser with saving and servers.">
+    <meta property="og:image" content="https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/icon.png">
+
+    <link type="image/png" rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/StaticQuasar931/mc@main/favicon.png">
+
+    <!-- Google Analytics gtag for Google Sites compatible load -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-5JZHSM4RCW"></script><script>
+      (function loadGAForGoogleSites(w, d, id){
+        w.dataLayer = w.dataLayer || [];
+        w.gtag = w.gtag || function(){ w.dataLayer.push(arguments); };
+
+        w.gtag('js', new Date());
+
+        var s = d.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(id);
+
+        var first = d.getElementsByTagName('script')[0];
+        (first && first.parentNode ? first.parentNode : d.head || d.documentElement).insertBefore(s, first || null);
+
+        w.gtag('config', id, {
+          cookie_domain: (w.location && w.location.hostname) ? w.location.hostname : 'auto',
+          cookie_flags: 'SameSite=None;Secure',
+          send_page_view: true
+        });
+
+        var tried = 0;
+        var retry = function(){
+          if (typeof w.gtag === 'function' && s && s.src && tried < 3){
+            tried++;
+            w.gtag('event', 'page_view_retry', { attempt: tried });
+          }
+        };
+        setTimeout(retry, 3000);
+        setTimeout(retry, 7000);
+        setTimeout(retry, 12000);
+      })(window, document, 'G-5JZHSM4RCW');
+    </script>
+
+    <!-- Core Eaglercraft script from jsDelivr version of your repo -->
+    <script src="https://cdn.jsdelivr.net/gh/StaticQuasar931/mc@main/classes.js"></script>
+
+    <script>
+      "use strict";
+      window.addEventListener("load", function() {
+        if (window.location.href.indexOf("file:") === 0) {
+          alert("HTTP please, do not open this file locally, run a local HTTP server and load it via HTTP");
+        } else {
+          var relayId = Math.floor(Math.random() * 3);
+          window.eaglercraftXOpts = {
+            demoMode: false,
+            container: "game_frame",
+            assetsURI: "https://cdn.jsdelivr.net/gh/StaticQuasar931/mc@main/assets.epk",
+            localesURI: "https://cdn.jsdelivr.net/gh/StaticQuasar931/mc@main/lang/",
+            worldsDB: "worlds",
+            servers: [
+              { addr: "wss://play.zelz.net", name: "ZelzNet" },
+              { addr: "wss://mc.arch.lol", name: "ArchMC" },
+              { addr: "wss://beta.arch.lol", name: "§r §r §r §r §4§lArchMC Beta" },
+              { addr: "wss://mc.lamplifesteal.xyz", name: "LampLifesteal" },
+              { addr: "wss://mc.ricenetwork.xyz", name: "Rice Network X BallCraft" },
+              { addr: "wss://clever-teaching.com", name: "Clever Teaching" },
+              { addr: "wss://mc.asspixel.net", name: "Asspixel Network" },
+              { addr: "wss://vanillamc.tech", name: "VanillaMC" },
+              { addr: "wss://aeon-network.net", name: "Aeon Network" }
+            ]
+          };
+          if (typeof main === "function") {
+            main();
+          } else {
+            console.error("Eaglercraft main() is not defined. Check classes.js load.");
+          }
+        }
+      });
+
+      window.onbeforeunload = function () {
+        return "Are you sure you want to leave? Your Minecraft world or session may be interrupted.";
+      };
+    </script>
+  </head>
+
+  <body style="margin:0;width:100%;height:100%;overflow:hidden;background-color:black;" id="game_frame" class="_eaglercraftX_root_element"><div class="_eaglercraftX_wrapper_element" style="position: relative; width: 100%; height: 100%; overflow: hidden;"><canvas class="_eaglercraftX_canvas_element" width="1227" height="868" style="width: 100%; height: 100%; z-index: 1; image-rendering: pixelated; touch-action: pan-x pan-y; -webkit-tap-highlight-color: rgba(255, 255, 255, 0); cursor: default;"></canvas></div></body></html>
