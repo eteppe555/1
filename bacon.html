@@ -1,65 +1,16 @@
+<!DOCTYPE html>
 <html>
 <head>
     <base target="_blank">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #000; }
+        iframe { width: 100%; height: 100%; border: none; }
+    </style>
 </head>
 <body>
 
-<div id="fr">
-    <iframe id="game-frame" width="100%" height="100%" frameborder="0" allowfullscreen=""></iframe>
-</div>
+    <iframe src="https://script.google.com/macros/s/AKfycbyuIoQ4CcpWLdSrWbXNXV1shvosIIEqJKKRkjmafNeBdJ_-dfIHdznpoYwFOSgK57a0JQ/exec" allowfullscreen=""></iframe>
 
-<button id="play-btn" class="c-button" type="button" onclick="LoadSafeGame()"></button>
-
-<style>
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background: #000; /* Keeps the screen entirely black */
-}
-#fr {
-    width: 100%;
-    height: 100%;
-    display: none; 
-}
-.c-button {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-    background: transparent; /* Makes the background clear */
-    appearance: none;
-    cursor: pointer;
-    z-index: 9999;
-}
-</style>
-
-<script>
-// We run the function automatically as soon as the window finishes loading
-window.onload = function() {
-    LoadSafeGame();
-};
-
-function LoadSafeGame() {
-    var encryptedSource = "PGlmcmFtZSB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBzcmM9Imh0dHBzOi8vYmV0dGVyYnVsbC5jb20vdXBsb2Fkcy81LzUvNi83LzU1NjcxOTQvY3VzdG9tX3RoZW1lcy8zMjA2OTAxMDU4NzM0Njk2NTAvZmlsZXMvaW5kZXguaHRtbCIgZnJhbWVib3JkZXI9IjAiIGFsbG93ZnVsbHNjcmVlbj48L2lmcmFtZT4=";
-    
-    var decodedHtml = atob(encryptedSource);
-    
-    var blob = new Blob([decodedHtml], { type: 'text/html' });
-    var blobUrl = URL.createObjectURL(blob);
-    
-    var frame = document.getElementById('game-frame');
-    frame.src = blobUrl;
-    
-    document.getElementById('fr').style.display = 'block';
-    
-    // Completely removed the button-hiding line since the button is already invisible
-}
-</script>
 </body>
 </html>
