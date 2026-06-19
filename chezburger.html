@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Potato Inc. Unblocked Entertainment — Minecraft Build</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      padding: 20px;
+      background-color: #000000;
+      font-family: 'Source Code Pro', monospace;
+      color: #4af262;
+    }
+
+    /* --- MATCHES POTATO INC SHARED MATRIX PANEL BACKGROUND --- */
+    .matrix-panel {
+      max-width: 360px; /* Adjusted slightly to fit new info layout cleanly */
+      margin: 40px auto;
+      padding: 24px;
+      background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.82)),
+        url('https://upload.wikimedia.org/wikipedia/commons/a/a0/Digital_rain_animation_small_letters_shine.gif');
+      background-size: cover;
+      background-position: center;
+      border: 2px solid #4af262;
+      box-shadow: 0 0 12px rgba(74,242,98,0.35);
+      border-radius: 14px;
+      position: relative;
+    }
+
+    /* Subtle CRT scanline overlay */
+    .matrix-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.025),
+        rgba(255,255,255,0.025) 1px,
+        transparent 2px,
+        transparent 4px
+      );
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Brand Logo Styling */
+    .brand-logo {
+      display: block;
+      max-width: 180px;
+      height: auto;
+      margin: 0 auto 20px auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* --- COPIES POTATO INC GAME CARD STYLING EXACTLY --- */
+    .game-card {
+      display: block;
+      width: 100%;
+      text-decoration: none;
+      border: 2px solid #4af262;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.72);
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      box-shadow: 0 0 10px rgba(74,242,98,0.22);
+      position: relative;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    .game-card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 0 14px rgba(74,242,98,0.45);
+      border-color: #7dff91;
+    }
+
+    /* Placeholder graphic display box */
+    .game-card-display {
+      width: 100%;
+      height: 180px;
+      background: #051407;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 2px solid #4af262;
+      font-size: 64px;
+      user-select: none;
+      text-shadow: 0 0 10px rgba(74,242,98,0.5);
+    }
+
+    .game-title {
+      padding: 14px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #4af262;
+      text-shadow: 0 0 4px rgba(74,242,98,0.7);
+    }
+
+    /* Informational System Metrics Block */
+    .info-block {
+      position: relative;
+      z-index: 2;
+      margin-top: 16px;
+      padding: 12px;
+      background: rgba(0, 0, 0, 0.85);
+      border: 1px dashed #4af262;
+      border-radius: 6px;
+      font-size: 11px;
+      line-height: 1.5;
+      color: #ffffff;
+    }
+
+    .info-block strong {
+      color: #4af262;
+    }
+
+    /* Footer Copyright Brand Notice */
+    .copyright-notice {
+      margin-top: 20px;
+      font-size: 10px;
+      text-align: center;
+      color: rgba(74, 242, 98, 0.6);
+      letter-spacing: 0.05em;
+      z-index: 2;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Container -->
+  <div class="matrix-panel">
+    
+    <!-- Requested Logo Placement -->
+    <img src="https://cdn.jsdelivr.net/gh/eteppe555/1@latest/Images/logo.png" alt="Potato Inc. Logo" class="brand-logo">
+    
+    <!-- Game Card Interface Component -->
+    <a class="game-card" id="launchLink" href="about:blank" target="_blank" rel="noopener noreferrer">
+      <div class="game-card-display">⛏️</div>
+      <div class="game-title">Minecraft 1.12.2</div>
+    </a>
+
+    <!-- System Features & Environment Data Info Block -->
+    <div class="info-block">
+      <strong>[storage]</strong> Worlds are auto-saved locally inside your browser's internal database cache. Cleared browser histories or system resets may wipe active files.<br><br>
+      <strong>[multiplayer]</strong> Online capabilities are enabled out-of-the-box. Connect directly with other network users via standard pre-compiled proxy servers listed in the tab.
+    </div>
+
+    <!-- Official Copyright Verification Line -->
+    <div class="copyright-notice">
+      &copy; 2026 potato inc. unblocked entertainment
+    </div>
+
+  </div>
+
+  <!-- Hidden Game Execution Payload Array -->
+  <textarea id="aboutblank_html" style="display:none;"><!DOCTYPE html>
+<html lang="en-US" style="width:100%;height:100%;background-color:black;">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Minecraft 1.12.2</title>
+    <link type="image/png" rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/StaticQuasar931/mc@main/favicon.png">
+    <script src="https://cdn.jsdelivr.net/gh/StaticQuasar931/mc@main/classes.js"></script>
+    <script>
+      "use strict";
+      window.addEventListener("load", function() {
+        if (window.location.href.indexOf("file:") === 0) {
+          alert("Please access via HTTP web server context.");
+        } else {
+          window.eaglercraftXOpts = {
+            demoMode: false,
+            container: "game_frame",
+            assetsURI: "https://cdn.jsdelivr.net/gh/StaticQuasar931/mc@main/assets.epk",
+            localesURI: "https://cdn.jsdelivr.net/gh/StaticQuasar931/mc@main/lang/",
+            worldsDB: "worlds",
+            servers: [
+              { addr: "wss://play.zelz.net", name: "ZelzNet" },
+              { addr: "wss://mc.arch.lol", name: "ArchMC" },
+              { addr: "wss://beta.arch.lol", name: "ArchMC Beta" },
+              { addr: "wss://mc.lamplifesteal.xyz", name: "LampLifesteal" },
+              { addr: "wss://mc.ricenetwork.xyz", name: "Rice Network X BallCraft" },
+              { addr: "wss://clever-teaching.com", name: "Clever Teaching" },
+              { addr: "wss://mc.asspixel.net", name: "Asspixel Network" },
+              { addr: "wss://vanillamc.tech", name: "VanillaMC" },
+              { addr: "wss://aeon-network.net", name: "Aeon Network" }
+            ]
+          };
+          if (typeof main === "function") { main(); }
+        }
+      });
+      window.onbeforeunload = function () { return "Session changes may not be saved."; };
+    </script>
+  </head>
+  <body style="margin:0;width:100%;height:100%;overflow:hidden;background-color:black;" id="game_frame"></body>
+</html></textarea>
+
+  <script>
+    (function(){
+      const link = document.getElementById("launchLink");
+      const templateEl = document.getElementById("aboutblank_html");
+
+      function openGame(e){
+        const html = templateEl ? templateEl.value : "<!doctype html><title>Error</title><p>Game framework missing.</p>";
+        const win = window.open("about:blank", "_blank");
+        
+        if (!win) return;
+        e.preventDefault();
+
+        try {
+          const doc = win.document;
+          doc.open();
+          doc.write(html);
+          doc.close();
+          win.focus();
+        } catch(err) {
+          console.error("Launch thread interrupted:", err);
+        }
+      }
+
+      if (link) {
+        link.addEventListener("click", openGame);
+      }
+    })();
+  </script>
+</body>
+</html>
