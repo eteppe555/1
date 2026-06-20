@@ -9,8 +9,10 @@
 
   <title>Drive Mad Extended (200 Levels)</title>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/genizy/dmad-poki@49b5ab6b987f5f3be58f9dae59c92e8fc1aab9b0/webapp/fancade.css">
-  <link rel="icon" href="https://cdn.jsdelivr.net/gh/genizy/dmad-poki@49b5ab6b987f5f3be58f9dae59c92e8fc1aab9b0/webapp/favicon.ico">
+  <base href="https://cdn.jsdelivr.net/gh/genizy/dmad-poki@49b5ab6b987f5f3be58f9dae59c92e8fc1aab9b0/webapp/">
+
+  <link rel="stylesheet" href="fancade.css">
+  <link rel="icon" href="favicon.ico">
 
   <style>
     html, body {
@@ -96,7 +98,6 @@
       displayAd: function() {},
       destroyAd: function() {}
     };
-    // Force the document to think Poki loaded successfully
     window.pokiSDKInitialized = true;
   </script>
 
@@ -131,7 +132,7 @@
       <div class="edge">
         <div class="box">
           <div class="black">
-            <img src="https://cdn.jsdelivr.net/gh/genizy/dmad-poki@49b5ab6b987f5f3be58f9dae59c92e8fc1aab9b0/webapp/cover.jpg" class="cover" alt="Drive Mad cover">
+            <img src="cover.jpg" class="cover" alt="Drive Mad cover">
             <p class="title">Drive Mad</p>
             <p class="author">Fancade</p>
           </div>
@@ -148,8 +149,8 @@
     <div id="webview_content" style="left: 0px; width: 982px; height: 638px; border-radius: 0px;"></div>
   </div>
 
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/genizy/dmad-poki@49b5ab6b987f5f3be58f9dae59c92e8fc1aab9b0/webapp/source_min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/genizy/dmad-poki@49b5ab6b987f5f3be58f9dae59c92e8fc1aab9b0/webapp/index.js"></script>
+  <script type="text/javascript" src="source_min.js"></script>
+  <script type="text/javascript" src="index.js"></script>
 
   <script>
     (function(){
