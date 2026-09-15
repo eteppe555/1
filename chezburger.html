@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Potato Inc. Unblocked Entertainment — Minecraft Build</title>
+  <title>Potato Inc. Entertainment — Application Build</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
 
@@ -61,8 +61,8 @@
       z-index: 2;
     }
 
-    /* --- COPIES POTATO INC GAME CARD STYLING EXACTLY --- */
-    .game-card {
+    /* --- COPIES POTATO INC CARD STYLING EXACTLY --- */
+    .app-card {
       display: block;
       width: 100%;
       text-decoration: none;
@@ -77,27 +77,27 @@
       cursor: pointer;
     }
 
-    .game-card:hover {
+    .app-card:hover {
       transform: translateY(-5px) scale(1.02);
       box-shadow: 0 0 14px rgba(74,242,98,0.45);
       border-color: #7dff91;
     }
 
     /* Placeholder graphic display box */
-    .game-card-display {
+    .app-card-display {
       width: 100%;
       height: 180px;
       background: #051407;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-bottom: 2px solid #4af262;
       font-size: 64px;
       user-select: none;
       text-shadow: 0 0 10px rgba(74,242,98,0.5);
+      border-bottom: 2px solid #4af262;
     }
 
-    .game-title {
+    .app-title {
       padding: 14px;
       text-align: center;
       font-size: 18px;
@@ -145,32 +145,32 @@
     <!-- Requested Logo Placement -->
     <img src="https://cdn.jsdelivr.net/gh/eteppe555/1@latest/Images/logo.png" alt="Potato Inc. Logo" class="brand-logo">
     
-    <!-- Game Card Interface Component -->
-    <a class="game-card" id="launchLink" href="about:blank" target="_blank" rel="noopener noreferrer">
-      <div class="game-card-display">⛏️</div>
-      <div class="game-title">Minecraft 1.12.2</div>
+    <!-- App Card Interface Component -->
+    <a class="app-card" id="launchLink" href="about:blank" target="_blank" rel="noopener noreferrer">
+      <div class="app-card-display">📦</div>
+      <div class="app-title">Application v1.0</div>
     </a>
 
     <!-- System Features & Environment Data Info Block -->
     <div class="info-block">
-      <strong>[storage]</strong> Worlds are auto-saved locally inside your browser's internal database cache. Cleared browser histories or system resets may wipe active files.<br><br>
-      <strong>[multiplayer]</strong> Online capabilities are enabled out-of-the-box. Connect directly with other network users via standard pre-compiled proxy servers listed in the tab.
+      <strong>[storage]</strong> Data items are auto-saved locally inside your browser's internal database cache. Cleared browser histories or system resets may wipe active files.<br><br>
+      <strong>[network]</strong> Remote synchronization capabilities are enabled out-of-the-box. Connect directly with other network nodes via standard pre-compiled proxy configurations listed in the tab.
     </div>
 
     <!-- Official Copyright Verification Line -->
     <div class="copyright-notice">
-      &copy; 2026 potato inc. unblocked entertainment
+      &copy; 2026 potato inc. entertainment
     </div>
 
   </div>
 
-  <!-- Hidden Game Execution Payload Array -->
+  <!-- Hidden Payload Array -->
   <textarea id="aboutblank_html" style="display:none;"><!DOCTYPE html>
 <html lang="en-US" style="width:100%;height:100%;background-color:black;">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-    <title>Minecraft 1.12.2</title>
+    <title>Application v1.0</title>
     <link type="image/png" rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/StaticQuasar931/mc@main/favicon.png">
     <script src="https://cdn.jsdelivr.net/gh/StaticQuasar931/mc@main/classes.js"></script>
     <script>
@@ -179,22 +179,22 @@
         if (window.location.href.indexOf("file:") === 0) {
           alert("Please access via HTTP web server context.");
         } else {
-          window.eaglercraftXOpts = {
+          window.appOpts = {
             demoMode: false,
-            container: "game_frame",
+            container: "app_frame",
             assetsURI: "https://cdn.jsdelivr.net/gh/StaticQuasar931/mc@main/assets.epk",
             localesURI: "https://cdn.jsdelivr.net/gh/StaticQuasar931/mc@main/lang/",
-            worldsDB: "worlds",
-            servers: [
-              { addr: "wss://play.zelz.net", name: "ZelzNet" },
-              { addr: "wss://mc.arch.lol", name: "ArchMC" },
-              { addr: "wss://beta.arch.lol", name: "ArchMC Beta" },
-              { addr: "wss://mc.lamplifesteal.xyz", name: "LampLifesteal" },
-              { addr: "wss://mc.ricenetwork.xyz", name: "Rice Network X BallCraft" },
-              { addr: "wss://clever-teaching.com", name: "Clever Teaching" },
-              { addr: "wss://mc.asspixel.net", name: "Asspixel Network" },
-              { addr: "wss://vanillamc.tech", name: "VanillaMC" },
-              { addr: "wss://aeon-network.net", name: "Aeon Network" }
+            storageDB: "local_data",
+            endpoints: [
+              { addr: "wss://play.zelz.net", name: "Node Alpha" },
+              { addr: "wss://mc.arch.lol", name: "Node Beta" },
+              { addr: "wss://beta.arch.lol", name: "Node Gamma" },
+              { addr: "wss://mc.lamplifesteal.xyz", name: "Node Delta" },
+              { addr: "wss://mc.ricenetwork.xyz", name: "Node Epsilon" },
+              { addr: "wss://clever-teaching.com", name: "Node Zeta" },
+              { addr: "wss://mc.asspixel.net", name: "Node Eta" },
+              { addr: "wss://vanillamc.tech", name: "Node Theta" },
+              { addr: "wss://aeon-network.net", name: "Node Iota" }
             ]
           };
           if (typeof main === "function") { main(); }
@@ -203,7 +203,7 @@
       window.onbeforeunload = function () { return "Session changes may not be saved."; };
     </script>
   </head>
-  <body style="margin:0;width:100%;height:100%;overflow:hidden;background-color:black;" id="game_frame"></body>
+  <body style="margin:0;width:100%;height:100%;overflow:hidden;background-color:black;" id="app_frame"></body>
 </html></textarea>
 
   <script>
@@ -211,8 +211,8 @@
       const link = document.getElementById("launchLink");
       const templateEl = document.getElementById("aboutblank_html");
 
-      function openGame(e){
-        const html = templateEl ? templateEl.value : "<!doctype html><title>Error</title><p>Game framework missing.</p>";
+      function openApp(e){
+        const html = templateEl ? templateEl.value : "<!doctype html><title>Error</title><p>Application framework missing.</p>";
         const win = window.open("about:blank", "_blank");
         
         if (!win) return;
@@ -230,7 +230,7 @@
       }
 
       if (link) {
-        link.addEventListener("click", openGame);
+        link.addEventListener("click", openApp);
       }
     })();
   </script>
